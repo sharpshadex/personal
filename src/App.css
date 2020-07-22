@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #0c0c0c;
+  background-color: #000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -43,4 +43,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.content-wrapper {
+  display: flex;
+  position: relative;
+  height: 100%;
+  flex-direction: column;
 }

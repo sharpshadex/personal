@@ -1,21 +1,30 @@
 import React from 'react';
 import {
-  Container, Row, ProfilePhoto, Column, Title, Nav, List, ListItem,
+  Container, Row, ProfilePhoto, Column, Title, Nav, List, ListItem, Label,
 } from './styles';
 import ppImage from '../../pp.png';
 
 const LIST = [
-  { name: 'Home' },
-  { name: 'Experience' },
-  { name: 'Works' },
-  { name: 'Testimonials' },
-  { name: 'Contact' },
+  { name: 'home' },
+  { name: 'skills' },
+  { name: 'experience' },
+  { name: 'works' },
+  { name: 'testimonials' },
+  { name: 'contact' },
 ];
 
 export default function SideMenu() {
+  const handleScrollToContent = (targetSection) => (event) => {
+    event.stopPropagation();
+    event.preventDefault();
+    document.getElementById(targetSection).scrollIntoView({
+      behavior: 'smooth',
+    });
+  };
+
   const generateList = () => LIST.map((item) => (
-    <ListItem>
-      {item.name}
+    <ListItem key={item.name}>
+      <Label href="" onClick={handleScrollToContent(item.name)}>{item.name}</Label>
     </ListItem>
   ));
 
