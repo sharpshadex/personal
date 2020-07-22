@@ -10,8 +10,13 @@ export const Container = styled.div`
   flex-direction: column;
   padding: 40px;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   border-right: 1px solid #88888833;
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Row = styled.div`
@@ -32,7 +37,7 @@ export const ProfilePhoto = styled.img`
   filter: contrast(0.5);
 `;
 
-export const Title = styled.div`
+export const Title = styled.a`
   display: flex;
   text-align: left;
   font-weight: bold;
@@ -41,6 +46,8 @@ export const Title = styled.div`
   margin-top: 15px;
   cursor: pointer;
   transition: 450ms all ease;
+  text-decoration: none;
+  color: #FFF;
   &:hover {
     color: #9013fe;
   }
@@ -97,4 +104,15 @@ export const Label = styled.a`
     position: absolute;
     z-index: -1;
   }
+`;
+
+export const Footer = styled.div`
+  display: flex;
+  align-self: flex-start;
+  width: 100%;
+  justify-content: space-around;
+`;
+
+export const CustomLink = styled(Title)`
+  
 `;

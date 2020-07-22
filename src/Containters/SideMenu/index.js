@@ -1,6 +1,9 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMailBulk } from '@fortawesome/free-solid-svg-icons';
+import { faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import {
-  Container, Row, ProfilePhoto, Column, Title, Nav, List, ListItem, Label,
+  Container, Row, ProfilePhoto, Column, Title, Nav, List, ListItem, Label, Footer, Wrapper, CustomLink,
 } from './styles';
 import ppImage from '../../pp.png';
 
@@ -29,21 +32,37 @@ export default function SideMenu() {
 
   return (
     <Container>
-      <Row>
-        <Column>
-          <ProfilePhoto src={ppImage} />
-          <Title>
-            Muhammet Olcay
-          </Title>
-        </Column>
-      </Row>
-      <Nav>
-        <List>
-          {
+      <Wrapper>
+        <Row>
+          <Column>
+            <ProfilePhoto src={ppImage} />
+            <Title href="https://www.linkedin.com/in/muhammet-olcay-62130a135" target="_blank">
+              Muhammet Olcay
+            </Title>
+          </Column>
+        </Row>
+        <Nav>
+          <List>
+            {
             generateList()
           }
-        </List>
-      </Nav>
+          </List>
+        </Nav>
+      </Wrapper>
+      <Footer>
+        <CustomLink href="https://twitter.com/mholcay" target="_blank">
+          <FontAwesomeIcon icon={faTwitter} />
+        </CustomLink>
+        <CustomLink href="https://www.instagram.com/olcayym/" target="_blank">
+          <FontAwesomeIcon icon={faInstagram} />
+        </CustomLink>
+        <CustomLink href="https://www.linkedin.com/in/muhammet-olcay-62130a135/" target="_blank">
+          <FontAwesomeIcon icon={faLinkedin} />
+        </CustomLink>
+        <CustomLink href="mailto:olcaymhmmet@gmail.com" target="_blank">
+          <FontAwesomeIcon icon={faMailBulk} />
+        </CustomLink>
+      </Footer>
     </Container>
   );
 }
