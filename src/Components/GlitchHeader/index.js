@@ -4,8 +4,8 @@ import { Container, GlitchEffect } from './styles';
 export default function GlitchHeader() {
   return (
     <Container>
-      <GlitchEffect data-text="I'm Muhammet Olcay">
-        I&apos;m Muhammet Olcay
+      <GlitchEffect data-text="Hello">
+        Hello,
       </GlitchEffect>
     </Container>
   );

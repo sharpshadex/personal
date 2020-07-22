@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import Header from './Containters/Header';
+import Intro from './Containters/Intro';
+import SideMenu from './Containters/SideMenu';
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <SideMenu />
+      <Intro />
     </div>
   );
 }
