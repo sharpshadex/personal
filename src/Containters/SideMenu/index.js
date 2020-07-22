@@ -6,11 +6,10 @@ import ppImage from '../../pp.png';
 
 const LIST = [
   { name: 'home' },
-  { name: 'skills' },
+  { name: 'summary' },
   { name: 'experience' },
   { name: 'works' },
   { name: 'testimonials' },
-  { name: 'contact' },
 ];
 
 export default function SideMenu() {

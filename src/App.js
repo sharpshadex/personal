@@ -5,8 +5,7 @@ import SideMenu from './Containters/SideMenu';
 import Experience from './Containters/Experience';
 import Works from './Containters/Works';
 import Testimonials from './Containters/Testimonials';
-import Contact from './Containters/Contact';
-import Skills from './Containters/Skills';
+import Summary from './Containters/Summary';
 
 function App() {
   return (
@@ -14,11 +13,10 @@ function App() {
       <SideMenu />
       <div className="content-wrapper">
         <Home />
-        <Skills />
+        <Summary />
         <Experience />
         <Works />
         <Testimonials />
-        <Contact />
       </div>
     </div>
   );
